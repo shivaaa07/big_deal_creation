@@ -1,0 +1,44 @@
+.navbar .nav-list .nav-item{
+    font-family: var(--headerFontFamily);
+    letter-spacing: 0.05rem;
+}
+
+.header .mobile-icons{
+    display: none;
+}
+
+@media (max-width:767px) {
+    .navbar{
+        display: block;
+        position: fixed;
+        top: 56px;
+        right: -300px;
+        width: 300px;
+        background-color: #cbd5e1;
+        height: 100vh;
+        transition: 0.5s ease-in-out;
+    }
+    .header .active{
+        right: 0;
+    }
+    .navbar .nav-list{
+        flex-direction: column;
+    }
+    .header .mobile-icons{
+        display: block;
+    }
+    .header .mobile-icons .menu-btn{
+        display: block;
+        font-size: 1.3rem;
+    }
+    .header .active .menu-btn{
+        display: none;
+    }
+    .header .mobile-icons .close-btn{
+        display: none;
+    }
+    .header .active .close-btn{
+        display: block;
+        font-size: 1.3rem;
+    }
+}
