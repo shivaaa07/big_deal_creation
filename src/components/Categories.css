@@ -11,3 +11,7 @@
 .imgWrapper:hover img{
     transform: scale(1.2);
 }
+#categorie .swiper {
+    height: 100%;
+    
+}

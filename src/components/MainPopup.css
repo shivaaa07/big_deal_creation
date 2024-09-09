@@ -35,4 +35,11 @@
     color: #000;
   }
 
+  .popupCloseBtn{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+  }
+
  
