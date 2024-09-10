@@ -3,240 +3,82 @@ import Heading from "./Heading";
 import Speaker from "../assets/speaker-home.jpg"
 
 const Product = () => {
+  const featuredProduct = [
+    {
+      featuredProductImg : Speaker,
+      featuredProductSpecification : "Smart Devices",
+      featuredProductName : "Amazon Echo Dot 5th Gen",
+      price : 3499
+    },
+    {
+      featuredProductImg : Speaker,
+      featuredProductSpecification : "Smart Devices",
+      featuredProductName : "Amazon Echo Dot 5th Gen",
+      price : 3499
+    },
+    {
+      featuredProductImg : Speaker,
+      featuredProductSpecification : "Smart Devices",
+      featuredProductName : "Amazon Echo Dot 5th Gen",
+      price : 3499
+    },
+    {
+      featuredProductImg : Speaker,
+      featuredProductSpecification : "Smart Devices",
+      featuredProductName : "Amazon Echo Dot 5th Gen",
+      price : 3499
+    },
+    {
+      featuredProductImg : Speaker,
+      featuredProductSpecification : "Smart Devices",
+      featuredProductName : "Amazon Echo Dot 5th Gen",
+      price : 3499
+    },
+    {
+      featuredProductImg : Speaker,
+      featuredProductSpecification : "Smart Devices",
+      featuredProductName : "Amazon Echo Dot 5th Gen",
+      price : 3499
+    },
+    {
+      featuredProductImg : Speaker,
+      featuredProductSpecification : "Smart Devices",
+      featuredProductName : "Amazon Echo Dot 5th Gen",
+      price : 3499
+    },
+    {
+      featuredProductImg : Speaker,
+      featuredProductSpecification : "Smart Devices",
+      featuredProductName : "Amazon Echo Dot 5th Gen",
+      price : 3499
+    }
+  ]
   return (
-    <>
-      <div className="container mx-auto">
+    <section className="my-12">
+      <div className="container mx-auto my-12">
         <Heading headingName={"Featured Products"} />
-        {/* <div className="productWrapper sm:flex md:justify-between sm:flex-wrap gap-2"> */}
-        <div className="productWrapper grid place-content-center sm:grid-rows-1 sm:grid-cols-2 gap-2 mx-auto">
-          {/* <div className="productCards sm:w-[30%] md:w-[25%] lg:w-[20%]">
-            <div className="cardHead max-w-72">
-              <img src={Speaker} alt="Speaker" className="w-full h-full rounded-lg"/>
-            </div>
-            <div className="productInfo">
-              <p className="text-xs text-gray-500">Smart Devices</p>
-              <div className="ProductName text-sm">
-                Amazon Echo Dot 5th Gen
+        <div className="productWrapper grid place-content-center sm:grid-rows-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-8 gap-2 mx-auto">
+          {
+            featuredProduct.map((productsDetails, index) => (
+            <div className="productCards justify-self-center" key={index}>
+              <div className="cardHead max-w-72">
+                <img src={productsDetails.featuredProductImg} alt="Speaker" className="w-full h-full rounded-lg"/>
               </div>
-              <div className="productPrice">
-                <span className="text-lg font-semibold">Rs.</span> 3499.00
-              </div>
-            </div>
-          </div>
-          <div className="productCards sm:w-[30%] md:w-[25%] lg:w-[20%]">
-            <div className="cardHead max-w-72">
-              <img src={Speaker} alt="Speaker" className="w-full h-full rounded-lg"/>
-            </div>
-            <div className="productInfo">
-              <p className="text-xs text-gray-500">Smart Devices</p>
-              <div className="ProductName text-sm">
-                Amazon Echo Dot 5th Gen
-              </div>
-              <div className="productPrice">
-                <span className="text-lg font-semibold">Rs.</span> 3499.00
+              <div className="productInfo">
+                <p className="text-xs text-gray-500 font-poppins">{productsDetails.featuredProductSpecification}</p>
+                <div className="ProductName text-sm font-poppins">
+                  {productsDetails.featuredProductName}
+                </div>
+                <div className="productPrice">
+                  <span className="text-lg font-semibold font-poppins">Rs.</span> {productsDetails.price.toFixed(2)}
+                </div>
               </div>
             </div>
-          </div>
-          <div className="productCards sm:w-[30%] md:w-[25%] lg:w-[20%]">
-            <div className="cardHead max-w-72">
-              <img src={Speaker} alt="Speaker" className="w-full h-full rounded-lg"/>
-            </div>
-            <div className="productInfo">
-              <p className="text-xs text-gray-500">Smart Devices</p>
-              <div className="ProductName text-sm">
-                Amazon Echo Dot 5th Gen
-              </div>
-              <div className="productPrice">
-                <span className="text-lg font-semibold">Rs.</span> 3499.00
-              </div>
-            </div>
-          </div>
-          <div className="productCards sm:w-[30%] md:w-[25%] lg:w-[20%]">
-            <div className="cardHead max-w-72">
-              <img src={Speaker} alt="Speaker" className="w-full h-full rounded-lg"/>
-            </div>
-            <div className="productInfo">
-              <p className="text-xs text-gray-500">Smart Devices</p>
-              <div className="ProductName text-sm">
-                Amazon Echo Dot 5th Gen
-              </div>
-              <div className="productPrice">
-                <span className="text-lg font-semibold">Rs.</span> 3499.00
-              </div>
-            </div>
-          </div>
-          <div className="productCards sm:w-[30%] md:w-[25%] lg:w-[20%]">
-            <div className="cardHead max-w-72">
-              <img src={Speaker} alt="Speaker" className="w-full h-full rounded-lg"/>
-            </div>
-            <div className="productInfo">
-              <p className="text-xs text-gray-500">Smart Devices</p>
-              <div className="ProductName text-sm">
-                Amazon Echo Dot 5th Gen
-              </div>
-              <div className="productPrice">
-                <span className="text-lg font-semibold">Rs.</span> 3499.00
-              </div>
-            </div>
-          </div>
-          <div className="productCards sm:w-[30%] md:w-[25%] lg:w-[20%]">
-            <div className="cardHead max-w-72">
-              <img src={Speaker} alt="Speaker" className="w-full h-full rounded-lg"/>
-            </div>
-            <div className="productInfo">
-              <p className="text-xs text-gray-500">Smart Devices</p>
-              <div className="ProductName text-sm">
-                Amazon Echo Dot 5th Gen
-              </div>
-              <div className="productPrice">
-                <span className="text-lg font-semibold">Rs.</span> 3499.00
-              </div>
-            </div>
-          </div>
-          <div className="productCards sm:w-[30%] md:w-[25%] lg:w-[20%]">
-            <div className="cardHead max-w-72">
-              <img src={Speaker} alt="Speaker" className="w-full h-full rounded-lg"/>
-            </div>
-            <div className="productInfo">
-              <p className="text-xs text-gray-500">Smart Devices</p>
-              <div className="ProductName text-sm">
-                Amazon Echo Dot 5th Gen
-              </div>
-              <div className="productPrice">
-                <span className="text-lg font-semibold">Rs.</span> 3499.00
-              </div>
-            </div>
-          </div>
-          <div className="productCards sm:w-[30%] md:w-[25%] lg:w-[20%]">
-            <div className="cardHead max-w-72">
-              <img src={Speaker} alt="Speaker" className="w-full h-full rounded-lg"/>
-            </div>
-            <div className="productInfo">
-              <p className="text-xs text-gray-500">Smart Devices</p>
-              <div className="ProductName text-sm">
-                Amazon Echo Dot 5th Gen
-              </div>
-              <div className="productPrice">
-                <span className="text-lg font-semibold">Rs.</span> 3499.00
-              </div>
-            </div>
-          </div> */}
-          <div className="productCards">
-            <div className="cardHead max-w-72">
-              <img src={Speaker} alt="Speaker" className="w-full h-full rounded-lg"/>
-            </div>
-            <div className="productInfo">
-              <p className="text-xs text-gray-500">Smart Devices</p>
-              <div className="ProductName text-sm">
-                Amazon Echo Dot 5th Gen
-              </div>
-              <div className="productPrice">
-                <span className="text-lg font-semibold">Rs.</span> 3499.00
-              </div>
-            </div>
-          </div>
-          <div className="productCards">
-            <div className="cardHead max-w-72">
-              <img src={Speaker} alt="Speaker" className="w-full h-full rounded-lg"/>
-            </div>
-            <div className="productInfo">
-              <p className="text-xs text-gray-500">Smart Devices</p>
-              <div className="ProductName text-sm">
-                Amazon Echo Dot 5th Gen
-              </div>
-              <div className="productPrice">
-                <span className="text-lg font-semibold">Rs.</span> 3499.00
-              </div>
-            </div>
-          </div>
-          <div className="productCards">
-            <div className="cardHead max-w-72">
-              <img src={Speaker} alt="Speaker" className="w-full h-full rounded-lg"/>
-            </div>
-            <div className="productInfo">
-              <p className="text-xs text-gray-500">Smart Devices</p>
-              <div className="ProductName text-sm">
-                Amazon Echo Dot 5th Gen
-              </div>
-              <div className="productPrice">
-                <span className="text-lg font-semibold">Rs.</span> 3499.00
-              </div>
-            </div>
-          </div>
-          <div className="productCards">
-            <div className="cardHead max-w-72">
-              <img src={Speaker} alt="Speaker" className="w-full h-full rounded-lg"/>
-            </div>
-            <div className="productInfo">
-              <p className="text-xs text-gray-500">Smart Devices</p>
-              <div className="ProductName text-sm">
-                Amazon Echo Dot 5th Gen
-              </div>
-              <div className="productPrice">
-                <span className="text-lg font-semibold">Rs.</span> 3499.00
-              </div>
-            </div>
-          </div>
-          <div className="productCards">
-            <div className="cardHead max-w-72">
-              <img src={Speaker} alt="Speaker" className="w-full h-full rounded-lg"/>
-            </div>
-            <div className="productInfo">
-              <p className="text-xs text-gray-500">Smart Devices</p>
-              <div className="ProductName text-sm">
-                Amazon Echo Dot 5th Gen
-              </div>
-              <div className="productPrice">
-                <span className="text-lg font-semibold">Rs.</span> 3499.00
-              </div>
-            </div>
-          </div>
-          <div className="productCards">
-            <div className="cardHead max-w-72">
-              <img src={Speaker} alt="Speaker" className="w-full h-full rounded-lg"/>
-            </div>
-            <div className="productInfo">
-              <p className="text-xs text-gray-500">Smart Devices</p>
-              <div className="ProductName text-sm">
-                Amazon Echo Dot 5th Gen
-              </div>
-              <div className="productPrice">
-                <span className="text-lg font-semibold">Rs.</span> 3499.00
-              </div>
-            </div>
-          </div>
-          <div className="productCards">
-            <div className="cardHead max-w-72">
-              <img src={Speaker} alt="Speaker" className="w-full h-full rounded-lg"/>
-            </div>
-            <div className="productInfo">
-              <p className="text-xs text-gray-500">Smart Devices</p>
-              <div className="ProductName text-sm">
-                Amazon Echo Dot 5th Gen
-              </div>
-              <div className="productPrice">
-                <span className="text-lg font-semibold">Rs.</span> 3499.00
-              </div>
-            </div>
-          </div>
-          <div className="productCards">
-            <div className="cardHead max-w-72">
-              <img src={Speaker} alt="Speaker" className="w-full h-full rounded-lg"/>
-            </div>
-            <div className="productInfo">
-              <p className="text-xs text-gray-500">Smart Devices</p>
-              <div className="ProductName text-sm">
-                Amazon Echo Dot 5th Gen
-              </div>
-              <div className="productPrice">
-                <span className="text-lg font-semibold">Rs.</span> 3499.00
-              </div>
-            </div>
-          </div>
-
+            ))
+          }
         </div>
       </div>
-    </>
+    </section>
   );
 };
 
