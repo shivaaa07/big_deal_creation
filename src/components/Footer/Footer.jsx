@@ -1,110 +1,136 @@
-import React from "react";
+import { React, useState } from "react";
 import { NavLink } from "react-router-dom";
-import { FaPhone, FaInstagram, FaFacebookF, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 import { SiMinutemailer } from "react-icons/si";
-import { IoLocationSharp } from "react-icons/io5";
-import { FaYoutube } from "react-icons/fa";
+import { BiSolidPhoneCall } from "react-icons/bi";
+import "./Footer.css";
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // You can add logic to handle form submission here
+    console.log("Submitted Email:", email);
+  };
+
   return (
     <>
-      <footer className="bg-neutral-800 p-4 lg:py-8">
-        <div className="container mx-auto grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4">
-          <div className="foote-navbar">
-            <h3 className="text-white text-4xl md:text-2xl font-semibold my-2 font-poppins">
-              Quick Links
-            </h3>
-            <ul className="nav-list">
-              <li className="nav-item">
-                <NavLink to="/" className="text-white text-2xl lg:text-base font-poppins">
-                  Home
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink to="About" className="text-white text-2xl lg:text-base font-poppins">
-                  About
-                </NavLink>
-              </li>
-            </ul>
-          </div>
-          <div className="condition-wrapper">
-            <h3 className="text-white text-4xl md:text-2xl font-semibold my-2 font-poppins">
-              Usefull Links
-            </h3>
-            <ul className="condition-list">
-              <li className="condition-item">
-                <NavLink to="#" className="text-white text-2xl lg:text-base font-poppins">
-                  Terms & Condition
-                </NavLink>
-              </li>
-              <li className="condition-item">
-                <NavLink to="#" className="text-white text-2xl lg:text-base font-poppins">
-                  Privacy & Policy
-                </NavLink>
-              </li>
-              <li className="condition-item">
-                <NavLink to="#" className="text-white text-2xl lg:text-base font-poppins">
-                  FAQ's
-                </NavLink>
-              </li>
-              <li className="condition-item">
-                <NavLink to="#" className="text-white text-2xl lg:text-base font-poppins">
-                  Sitemap
-                </NavLink>
-              </li>
-            </ul>
-          </div>
-          <div className="contact-info mt-8 lg:mt-0">
-            <h3 className="text-white text-4xl md:text-2xl font-semibold my-2 font-poppins">
-              Contact Info
-            </h3>
-            <ul>
-              <li className="text-white leading-10 text-2xl lg:text-base font-poppins">
-                <FaPhone className="text-white inline" /> : +91 00000 00000
-              </li>
-              <li className="text-white text-2xl lg:text-base leading-10 font-poppins">
-                <SiMinutemailer className="text-white inline" /> :
-                enquiry@bigdealcreation.in
-              </li>
-              <li className="text-white leading-10 max-w-80 text-2xl lg:text-base font-poppins">
-                <IoLocationSharp className="text-white inline" /> : V Work
-                Business Park, Near Mulund Check Naka - 400080
-              </li>
-            </ul>
-          </div>
-          <div className="social-wrapper mt-8 lg:mt-0">
-            <h3 className="text-white text-4xl md:text-2xl font-semibold my-2 font-poppins">
-              Instagram
-            </h3>
-            <div className="grid gap-2 grid-cols-4 my-2">
-                <img src="https://www.brandedcorporategift.com/content/images/instagram/01.jpg" alt="Joining Kit" />
-                <img src="https://www.brandedcorporategift.com/content/images/instagram/02.jpg" alt="Water Bottle" />
-                <img src="https://www.brandedcorporategift.com/content/images/instagram/03.jpg" alt="T-Shirt" />
-                <img src="https://www.brandedcorporategift.com/content/images/instagram/04.jpg" alt="Gift" />
-                <img src="https://www.brandedcorporategift.com/content/images/instagram/05.jpg" alt="" />
-                <img src="https://www.brandedcorporategift.com/content/images/instagram/06.jpg" alt="" />
-                <img src="https://www.brandedcorporategift.com/content/images/instagram/07.jpg" alt="" />
-                <img src="https://www.brandedcorporategift.com/content/images/instagram/08.jpg" alt="" />
+      <footer className="footer">
+        <div className="container mx-auto">
+          <div className="overlay"></div>
+          <div className="footer-container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 pt-12 relative z-50">
+            <div className="news-latter px-2">
+              <div className="suscribe">
+                <h4 className="text-white text-xl font-semibold text-center mb-4">
+                  News Latters
+                </h4>
+                <form onSubmit={handleSubmit} className="flex">
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    className="w-4/6 outline-none px-2 py-1"
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="Enter Email"
+                  />
+                  <input
+                    type="submit"
+                    value="Subscribe"
+                    className="w-2/6 outline-none bg-red-700 cursor-pointer text-white font-poppins font-semibold px-2 py-1"
+                  />
+                </form>
+              </div>
             </div>
-            <div className="social-icons mt-7">
-                <ul className="icons-list flex gap-2">
-                    <li className="icon-item w-11 h-11 p-2 rounded-full border-solid border-2 border-slate-50">
-                        <a href="#" target="_blank"><FaInstagram className="text-white hover:text-red-700 text-2xl"/></a>
-                    </li>
-                    <li className="icon-item w-11 h-11 p-2 rounded-full border-solid border-2 border-slate-50">
-                        <a href="#" target="_blank"><FaFacebookF className="text-white hover:text-blue-700 text-2xl"/></a>
-                    </li>
-                    <li className="icon-item w-11 h-11 p-2 rounded-full border-solid border-2 border-slate-50">
-                        <a href="#" target="_blank"><FaLinkedinIn className="text-white hover:text-blue-700 text-2xl"/></a>
-                    </li>
-                    <li className="icon-item w-11 h-11 p-2 rounded-full border-solid border-2 border-slate-50">
-                        <a href="#" target="_blank"><FaXTwitter className="text-white hover:text-sky-500 text-2xl"/></a>
-                    </li>
-                    <li className="icon-item w-11 h-11 p-2 rounded-full border-solid border-2 border-slate-50">
-                        <a href="#" target="_blank"><FaYoutube className="text-white hover:text-red-700 text-2xl"/></a>
-                    </li>
-                </ul>
+            <div className="office-address px-2 text-center">
+              <h4 className="text-white text-xl font-semibold text-center mb-4">
+                Office Address
+              </h4>
+              <p className="text-white text-black-400">
+                Powerlook Apparels Pvt Ltd Lotus Corporate Park Wing G02 - 1502,
+                Ram Mandir Lane, off Western Express Highway, Goregaon, Mulund
+                West - 400080
+              </p>
+              <div className="timing">
+                <h5 className="text-white text-md font-medium mt-4">
+                  Office Timing
+                </h5>
+                <span className="text-white text-black-400">
+                  Mon - Sat : 10:00AM - 07:00 PM
+                </span>
+              </div>
             </div>
+            <div className="usefull-links px-2 text-center">
+              <h4 className="text-white text-xl font-semibold text-center mb-4">
+                Useful Links
+              </h4>
+              <ul className="navbar-links">
+                <li className="item">
+                  <NavLink className="text-white hover:text-red-500 hover:font-semibold">
+                    About Us
+                  </NavLink>
+                </li>
+                <li className="item">
+                  <NavLink className="text-white hover:text-red-500 hover:font-semibold">
+                    Shipping Policy
+                  </NavLink>
+                </li>
+                <li className="item">
+                  <NavLink className="text-white hover:text-red-500 hover:font-semibold">
+                    Privacy Policy
+                  </NavLink>
+                </li>
+                <li className="item">
+                  <NavLink className="text-white hover:text-red-500 hover:font-semibold">
+                    Contact Us
+                  </NavLink>
+                </li>
+              </ul>
+            </div>
+            <div className="categories px-2 text-center">
+              <h4 className="text-white text-white text-xl font-semibold text-center mb-4">
+                Categories
+              </h4>
+              <ul className="categories-links">
+                <li className="item">
+                  <NavLink className="text-white hover:text-red-500 hover:font-semibold">
+                    T-Shirts
+                  </NavLink>
+                </li>
+                <li className="item">
+                  <NavLink className="text-white hover:text-red-500 hover:font-semibold">
+                    Shirt
+                  </NavLink>
+                </li>
+                <li className="item">
+                  <NavLink className="text-white hover:text-red-500 hover:font-semibold">
+                    Bags
+                  </NavLink>
+                </li>
+                <li className="item">
+                  <NavLink className="text-white hover:text-red-500 hover:font-semibold">
+                    Accessories
+                  </NavLink>
+                </li>
+              </ul>
+            </div>
+            <div className="contact px-2">
+              <h4 className="text-white text-xl font-semibold text-center uppercase mb-4">
+                Support
+              </h4>
+              <div className="mail flex justify-center items-center gap-3 text-white hover:text-red-500 cursor-pointer leading-10">
+                <SiMinutemailer className="text-3xl" />
+                <span className="font-semibold">
+                  support@bigdealcreation.com
+                </span>
+              </div>
+              <div className="phone flex gap-3 text-white hover:text-red-500 cursor-pointer leading-8">
+                <BiSolidPhoneCall className="text-3xl" />
+                <span className="font-semibold">+91 00000 00000</span>
+              </div>
+            </div>
+          </div>
+          <div className="copy-right py-4 relative z-10">
+            <p className="text-center text-slate-50 text-md">@ 2024 Big Deal Creation | All Rights Reserved</p>
           </div>
         </div>
       </footer>
