@@ -29,7 +29,7 @@ const ProductGallery = () => {
     <div className="container mx-auto my-16">
       <div className="gallery md:block md:w-full lg:flex justify-center gap-4">
         <div className="sliderWrapper px-4">
-          <img src={diwaliGift} alt="Diwali Gifting ideas" className='w-full md:h-full lg:h-full xl:h-full rounded-3xl'/>
+          <img src={diwaliGift} alt="Diwali Gifting ideas" className='w-[300px] sm:w-full md:h-full lg:h-full xl:h-full rounded-3xl mx-auto sm:mx-0'/>
         </div>
           <div className="grid sm:grid-cols-2 place-items-center lg:place-items-start gap-3 mt-4 lg:mt-0">
           {

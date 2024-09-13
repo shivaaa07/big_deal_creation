@@ -55,7 +55,7 @@ const Categories = () => {
       <div className="container my-20 mx-auto">
         <Heading headingName={"Categories"} viewBtn={"hidden"} />
         <Swiper
-          slidesPerView={4}
+          slidesPerView={1}
           spaceBetween={10}
           pagination={{
             clickable: true,
@@ -66,7 +66,7 @@ const Categories = () => {
               spaceBetween: 20,
             },
             768: {
-              slidesPerView: 4,
+              slidesPerView: 3,
               spaceBetween: 40,
             },
             1024: {

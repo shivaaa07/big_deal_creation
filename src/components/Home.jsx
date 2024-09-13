@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import HeroBanner from "./HeroBanner";
 import Categories from "./Categories";
 import ProductGallery from "./ProductGallery";
@@ -8,16 +8,25 @@ import Product from "./Product";
 
 const Home = () => {
   // On load function
-  const mainPopUp = () => {
-    document.getElementById("popup").style.display = "flex";
-  };
-  // document.getElementsByClassName("popupCloseBtn").style.display = "none";
-  // const closeBtn = document.querySelectorAll("popupCloseBtn");
-  // closeBtn.addEventListener("click", () => {
-  //   alert("Hello World");
-  // });
+  const [showModal, setShowModal] = useState("hidden");
 
-  // window.onload = setTimeout(mainPopUp, 5000);
+  const openModal = () => {
+    console.log("Main Popup Call");
+    setShowModal("block");
+  };
+
+  const closeModal = () => {
+    setShowModal("hidden")
+  }
+
+  useEffect(() => {
+    const timer = setTimeout(openModal, 5000);
+
+    // Cleanup function to clear the timeout if the component unmounts
+    return () => clearTimeout(timer);
+  }, []); 
+
+  // window.onload = setTimeout(openModal, 5000);
 
   return (
     <>
@@ -26,9 +35,8 @@ const Home = () => {
         <Categories />
         <ProductGallery />
         <Product />
-        <div id="popup" style={{ display: "none" }}>
-          <MainPopup popupCloseBtn={"popupCloseBtn"} />
-        </div>
+        {/* <MainPopup hiddenClass={showModal} onClose={closeModal}/> */}
+        <MainPopup />
       </div>
     </>
   );

@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import { SiMinutemailer } from "react-icons/si";
 import { BiSolidPhoneCall } from "react-icons/bi";
 import "./Footer.css";
+import FooterDivider from "./FooterDivider";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
@@ -18,13 +19,13 @@ const Footer = () => {
       <footer className="footer">
         <div className="container mx-auto">
           <div className="overlay"></div>
-          <div className="footer-container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 pt-12 relative z-50">
+          <div className="footer-container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-5 pt-12 relative z-40">
             <div className="news-latter px-2">
               <div className="suscribe">
                 <h4 className="text-white text-xl font-semibold text-center mb-4">
                   News Latters
                 </h4>
-                <form onSubmit={handleSubmit} className="flex">
+                <form onSubmit={handleSubmit} className="flex max-w-[400px] mx-auto">
                   <input
                     type="email"
                     name="email"
@@ -42,6 +43,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="office-address px-2 text-center">
+              <FooterDivider display={"block sm:hidden"} />
               <h4 className="text-white text-xl font-semibold text-center mb-4">
                 Office Address
               </h4>
@@ -60,6 +62,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="usefull-links px-2 text-center">
+              <FooterDivider display={"block lg:hidden"} />
               <h4 className="text-white text-xl font-semibold text-center mb-4">
                 Useful Links
               </h4>
@@ -87,7 +90,8 @@ const Footer = () => {
               </ul>
             </div>
             <div className="categories px-2 text-center">
-              <h4 className="text-white text-white text-xl font-semibold text-center mb-4">
+              <FooterDivider display={"block lg:hidden"} />
+              <h4 className="text-white text-xl font-semibold text-center mb-4">
                 Categories
               </h4>
               <ul className="categories-links">
@@ -113,7 +117,8 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div className="contact px-2">
+            <div className="contact px-2 sm:col-start-1 sm:col-end-3 lg:col-start-auto lg:col-end-auto">
+              <FooterDivider display={"block lg:hidden"} />
               <h4 className="text-white text-xl font-semibold text-center uppercase mb-4">
                 Support
               </h4>
@@ -123,14 +128,16 @@ const Footer = () => {
                   support@bigdealcreation.com
                 </span>
               </div>
-              <div className="phone flex gap-3 text-white hover:text-red-500 cursor-pointer leading-8">
+              <div className="phone flex justify-center items-center gap-3 text-white hover:text-red-500 cursor-pointer leading-8">
                 <BiSolidPhoneCall className="text-3xl" />
                 <span className="font-semibold">+91 00000 00000</span>
               </div>
             </div>
           </div>
           <div className="copy-right py-4 relative z-10">
-            <p className="text-center text-slate-50 text-md">@ 2024 Big Deal Creation | All Rights Reserved</p>
+            <p className="text-center text-slate-50 text-md">
+              @ 2024 Big Deal Creation | All Rights Reserved
+            </p>
           </div>
         </div>
       </footer>
