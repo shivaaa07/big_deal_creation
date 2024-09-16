@@ -3,7 +3,11 @@ import Heading from "./Heading";
 import { NavLink } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
-import productimg1 from "../assets/canvas-backpack.webp";
+import Electronics from "../assets/categories/Electronics.jpg";
+import tShirt from "../assets/categories/t-shirt.jpg";
+import shirt from "../assets/categories/Shirt.jpg";
+import bags from "../assets/categories/Backpacks.jpg";
+// import shirt from "../assets/categories/Shirt.jpg";
 import "swiper/css";
 import "swiper/css/pagination";
 import "./Categories.css";
@@ -11,43 +15,43 @@ import "./Categories.css";
 const Categories = () => {
   const productLists = [
     {
-      categorieImage: productimg1,
+      categorieImage: Electronics,
       categoriesName: "Electronic",
       categoriesLinks: "About",
     },
     {
-      categorieImage: productimg1,
+      categorieImage: tShirt,
       categoriesName: "T Shirt",
       categoriesLinks: "/",
     },
     {
-      categorieImage: productimg1,
+      categorieImage: shirt,
       categoriesName: "Shirt",
     },
     {
-      categorieImage: productimg1,
+      categorieImage: bags,
       categoriesName: "Bags",
     },
-    {
-      categorieImage: productimg1,
-      categoriesName: "Welcome Kits",
-    },
-    {
-      categorieImage: productimg1,
-      categoriesName: "Welcome Kits",
-    },
-    {
-      categorieImage: productimg1,
-      categoriesName: "Welcome Kits",
-    },
-    {
-      categorieImage: productimg1,
-      categoriesName: "Welcome Kits",
-    },
-    {
-      categorieImage: productimg1,
-      categoriesName: "Welcome Kits",
-    },
+    // {
+    //   categorieImage: productimg1,
+    //   categoriesName: "Welcome Kits",
+    // },
+    // {
+    //   categorieImage: productimg1,
+    //   categoriesName: "Welcome Kits",
+    // },
+    // {
+    //   categorieImage: productimg1,
+    //   categoriesName: "Welcome Kits",
+    // },
+    // {
+    //   categorieImage: productimg1,
+    //   categoriesName: "Welcome Kits",
+    // },
+    // {
+    //   categorieImage: productimg1,
+    //   categoriesName: "Welcome Kits",
+    // },
   ];
 
   return (

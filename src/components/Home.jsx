@@ -35,8 +35,8 @@ const Home = () => {
         <Categories />
         <ProductGallery />
         <Product />
-        {/* <MainPopup hiddenClass={showModal} onClose={closeModal}/> */}
-        <MainPopup />
+        <MainPopup hiddenClass={showModal} onClose={closeModal}/>
+        {/* <MainPopup /> */}
       </div>
     </>
   );
