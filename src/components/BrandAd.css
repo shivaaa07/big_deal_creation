@@ -1,0 +1,6 @@
+#ad-container{
+    background-image: url("../assets/ad_bg.jpg");
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+    background-position: center;
+}

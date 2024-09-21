@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import HeroBanner from "./HeroBanner";
-import Categories from "./Categories";
+import Categories from "./NavCategories";
 import ProductGallery from "./ProductGallery";
 import MainPopup from "./MainPopup";
 import "./Home.css";
-import Product from "./Product";
+import FeaturedProduct from "./FeaturedProduct";
+import BrandAd from "./BrandAd";
+import PopularBrands from "./PopularBrands";
 
 const Home = () => {
   // On load function
@@ -34,9 +36,10 @@ const Home = () => {
         <HeroBanner />
         <Categories />
         <ProductGallery />
-        <Product />
-        <MainPopup hiddenClass={showModal} onClose={closeModal}/>
-        {/* <MainPopup /> */}
+        <FeaturedProduct />
+        {/* <MainPopup hiddenClass={showModal} onClose={closeModal}/> */}
+        <BrandAd />
+        <PopularBrands />
       </div>
     </>
   );

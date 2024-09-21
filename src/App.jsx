@@ -3,6 +3,7 @@ import About from "./pages/About";
 import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./Layout";
+import Categories from "./pages/Categories";
 
 function App() {
   const router = createBrowserRouter([
@@ -18,6 +19,10 @@ function App() {
           path: "About",
           element: <About />,
         },
+        {
+          path : "Categories",
+          element : <Categories />
+        }
       ],
     },
   ]);

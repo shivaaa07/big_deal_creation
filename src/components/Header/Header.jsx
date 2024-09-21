@@ -34,6 +34,9 @@ const Header = () => {
               <li className="nav-item">
                 <NavLink to="About" onClick={handleClose}>About Us</NavLink>
               </li>
+              <li className="nav-item">
+                <NavLink to="Categories" onClick={handleClose}>Categories</NavLink>
+              </li>
             </ul>
           </nav>
           <div
