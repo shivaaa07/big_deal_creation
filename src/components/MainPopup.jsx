@@ -3,7 +3,7 @@ import { useState } from "react";
 // import popupImg from "../assets/popup.webp";
 import popupImg from "../assets/employee-joining-kits-2.webp";
 import { RxCross2 } from "react-icons/rx";
-import "./MainPopup.css";
+import styles from "./MainPopup.module.css";
 
 const MainPopup = ({ onClose, hiddenClass }) => {
   console.log(hiddenClass);
@@ -48,7 +48,7 @@ const MainPopup = ({ onClose, hiddenClass }) => {
                 <input
                   type="submit"
                   value="Subscribe"
-                  className="btn font-protest tracking-wider my-2"
+                  className={`${styles.btn} font-protest tracking-wider my-2`}
                 />
               </div>
             </form>

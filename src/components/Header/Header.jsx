@@ -43,8 +43,8 @@ const Header = () => {
             onClick={handleChange}
             className={menuToggle ? "active" : "mobile-icons"}
           >
-            <FaAlignRight className="menu-btn" />
-            <FaTimes className="close-btn" />
+            <FaAlignRight className="menu-btn cursor-pointer" />
+            <FaTimes className="close-btn cursor-pointer" />
           </div>
         </div>
       </header>

@@ -50,7 +50,7 @@ const Footer = () => {
               <h4 className="text-white text-xl font-semibold text-center mb-4">
                 Office Address
               </h4>
-              <p className="text-xs sm:text-base md:text-xl text-white text-black-400">
+              <p className="text-xs text-white text-black-400">
                 Powerlook Apparels Pvt Ltd Lotus Corporate Park Wing G02 - 1502,
                 Ram Mandir Lane, off Western Express Highway, Goregaon, Mulund
                 West - 400080
@@ -59,7 +59,7 @@ const Footer = () => {
                 <h5 className="text-white text-md font-medium mt-4">
                   Office Timing
                 </h5>
-                <span className="text-xs sm:text-base md:text-xl text-white text-black-400">
+                <span className="text-xs text-white text-black-400">
                   Mon - Sat : 10:00AM - 07:00 PM
                 </span>
               </div>
@@ -71,22 +71,22 @@ const Footer = () => {
               </h4>
               <ul className="navbar-links">
                 <li className="item">
-                  <NavLink className="text-xs sm:text-base md:text-xl text-white hover:text-red-500 hover:font-semibold">
+                  <NavLink className="text-xs text-white hover:text-red-500 hover:font-semibold">
                     About Us
                   </NavLink>
                 </li>
                 <li className="item">
-                  <NavLink className="text-xs sm:text-base md:text-xl text-white hover:text-red-500 hover:font-semibold">
+                  <NavLink className="text-xs text-white hover:text-red-500 hover:font-semibold">
                     Shipping Policy
                   </NavLink>
                 </li>
                 <li className="item">
-                  <NavLink className="text-xs sm:text-base md:text-xl text-white hover:text-red-500 hover:font-semibold">
+                  <NavLink className="text-xs text-white hover:text-red-500 hover:font-semibold">
                     Privacy Policy
                   </NavLink>
                 </li>
                 <li className="item">
-                  <NavLink className="text-xs sm:text-base md:text-xl text-white hover:text-red-500 hover:font-semibold">
+                  <NavLink className="text-xs text-white hover:text-red-500 hover:font-semibold">
                     Contact Us
                   </NavLink>
                 </li>
@@ -99,22 +99,22 @@ const Footer = () => {
               </h4>
               <ul className="categories-links">
                 <li className="item">
-                  <NavLink className="text-xs sm:text-base md:text-xl text-white hover:text-red-500 hover:font-semibold">
+                  <NavLink className="text-xs text-white hover:text-red-500 hover:font-semibold">
                     T-Shirts
                   </NavLink>
                 </li>
                 <li className="item">
-                  <NavLink className="text-xs sm:text-base md:text-xl text-white hover:text-red-500 hover:font-semibold">
+                  <NavLink className="text-xs text-white hover:text-red-500 hover:font-semibold">
                     Shirt
                   </NavLink>
                 </li>
                 <li className="item">
-                  <NavLink className="text-xs sm:text-base md:text-xl text-white hover:text-red-500 hover:font-semibold">
+                  <NavLink className="text-xs text-white hover:text-red-500 hover:font-semibold">
                     Bags
                   </NavLink>
                 </li>
                 <li className="item">
-                  <NavLink className="text-xs sm:text-base md:text-xl text-white hover:text-red-500 hover:font-semibold">
+                  <NavLink className="text-xs text-white hover:text-red-500 hover:font-semibold">
                     Accessories
                   </NavLink>
                 </li>
@@ -125,22 +125,22 @@ const Footer = () => {
               <h4 className="text-white text-xl font-semibold text-center uppercase mb-4">
                 Support
               </h4>
-              <div className="mail flex justify-center items-center gap-3 text-white hover:text-red-500 cursor-pointer leading-10">
-                <SiMinutemailer className="text-xs sm:text-base md:text-xl" />
-                <span className="text-xs sm:text-base md:text-xl font-semibold">
+              <div className="mail flex justify-center lg:justify-start items-center gap-3 text-white hover:text-red-500 cursor-pointer leading-10">
+                <SiMinutemailer className="text-xs" />
+                <span className="text-xs font-semibold">
                   support@bigdealcreation.com
                 </span>
               </div>
-              <div className="phone flex justify-center items-center gap-3 text-white hover:text-red-500 cursor-pointer leading-8">
-                <BiSolidPhoneCall className="text-xs sm:text-base md:text-xl" />
-                <span className="text-xs sm:text-base md:text-xl font-semibold">
+              <div className="phone flex justify-center lg:justify-start items-center gap-3 text-white hover:text-red-500 cursor-pointer leading-8">
+                <BiSolidPhoneCall className="text-xs" />
+                <span className="text-xs font-semibold">
                   +91 00000 00000
                 </span>
               </div>
             </div>
           </div>
           <div className="copy-right py-4 relative z-10">
-            <p className="text-center text-slate-50 text-xs sm:text-base md:text-xl">
+            <p className="text-center text-slate-50 text-xs">
               @ 2024 Big Deal Creation | All Rights Reserved
             </p>
           </div>

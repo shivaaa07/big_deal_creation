@@ -36,7 +36,7 @@ const PopularBrands = () => {
                 <div className="flex justify-center">
                     {
                         brands.map((brand, index)=>(
-                            <div className="brandImgWrapper w-52 h-52" key={index}>
+                            <div className="brandImgWrapper w-full md:w-52 h-auto md:h-52" key={index}>
                                 <img src={brand.brandsImg} alt={brand.altAttribute} className='w-full h-full' />
                             </div>
                         ))
