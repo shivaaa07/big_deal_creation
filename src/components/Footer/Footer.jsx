@@ -25,19 +25,22 @@ const Footer = () => {
                 <h4 className="text-white text-xl font-semibold text-center mb-4">
                   News Latters
                 </h4>
-                <form onSubmit={handleSubmit} className="flex max-w-[400px] mx-auto">
+                <form
+                  onSubmit={handleSubmit}
+                  className="flex max-w-[400px] mx-auto"
+                >
                   <input
                     type="email"
                     name="email"
                     id="email"
-                    className="w-4/6 outline-none px-2 py-1"
+                    className="w-4/6 lg:w-1/2 outline-none px-2 py-1"
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="Enter Email"
                   />
                   <input
                     type="submit"
                     value="Subscribe"
-                    className="w-2/6 outline-none bg-red-700 cursor-pointer text-white font-poppins font-semibold px-2 py-1"
+                    className="w-2/6 lg:w-1/2 outline-none bg-red-700 cursor-pointer text-white font-poppins font-semibold px-2 py-1"
                   />
                 </form>
               </div>
@@ -47,7 +50,7 @@ const Footer = () => {
               <h4 className="text-white text-xl font-semibold text-center mb-4">
                 Office Address
               </h4>
-              <p className="text-white text-black-400">
+              <p className="text-xs sm:text-base md:text-xl text-white text-black-400">
                 Powerlook Apparels Pvt Ltd Lotus Corporate Park Wing G02 - 1502,
                 Ram Mandir Lane, off Western Express Highway, Goregaon, Mulund
                 West - 400080
@@ -56,7 +59,7 @@ const Footer = () => {
                 <h5 className="text-white text-md font-medium mt-4">
                   Office Timing
                 </h5>
-                <span className="text-white text-black-400">
+                <span className="text-xs sm:text-base md:text-xl text-white text-black-400">
                   Mon - Sat : 10:00AM - 07:00 PM
                 </span>
               </div>
@@ -68,22 +71,22 @@ const Footer = () => {
               </h4>
               <ul className="navbar-links">
                 <li className="item">
-                  <NavLink className="text-white hover:text-red-500 hover:font-semibold">
+                  <NavLink className="text-xs sm:text-base md:text-xl text-white hover:text-red-500 hover:font-semibold">
                     About Us
                   </NavLink>
                 </li>
                 <li className="item">
-                  <NavLink className="text-white hover:text-red-500 hover:font-semibold">
+                  <NavLink className="text-xs sm:text-base md:text-xl text-white hover:text-red-500 hover:font-semibold">
                     Shipping Policy
                   </NavLink>
                 </li>
                 <li className="item">
-                  <NavLink className="text-white hover:text-red-500 hover:font-semibold">
+                  <NavLink className="text-xs sm:text-base md:text-xl text-white hover:text-red-500 hover:font-semibold">
                     Privacy Policy
                   </NavLink>
                 </li>
                 <li className="item">
-                  <NavLink className="text-white hover:text-red-500 hover:font-semibold">
+                  <NavLink className="text-xs sm:text-base md:text-xl text-white hover:text-red-500 hover:font-semibold">
                     Contact Us
                   </NavLink>
                 </li>
@@ -91,27 +94,27 @@ const Footer = () => {
             </div>
             <div className="categories px-2 text-center">
               <FooterDivider display={"block lg:hidden"} />
-              <h4 className="text-white text-xl font-semibold text-center mb-4">
+              <h4 className="text-xs sm:text-lg md:text-xl text-white text-xl font-semibold text-center mb-4">
                 Categories
               </h4>
               <ul className="categories-links">
                 <li className="item">
-                  <NavLink className="text-white hover:text-red-500 hover:font-semibold">
+                  <NavLink className="text-xs sm:text-base md:text-xl text-white hover:text-red-500 hover:font-semibold">
                     T-Shirts
                   </NavLink>
                 </li>
                 <li className="item">
-                  <NavLink className="text-white hover:text-red-500 hover:font-semibold">
+                  <NavLink className="text-xs sm:text-base md:text-xl text-white hover:text-red-500 hover:font-semibold">
                     Shirt
                   </NavLink>
                 </li>
                 <li className="item">
-                  <NavLink className="text-white hover:text-red-500 hover:font-semibold">
+                  <NavLink className="text-xs sm:text-base md:text-xl text-white hover:text-red-500 hover:font-semibold">
                     Bags
                   </NavLink>
                 </li>
                 <li className="item">
-                  <NavLink className="text-white hover:text-red-500 hover:font-semibold">
+                  <NavLink className="text-xs sm:text-base md:text-xl text-white hover:text-red-500 hover:font-semibold">
                     Accessories
                   </NavLink>
                 </li>
@@ -123,19 +126,21 @@ const Footer = () => {
                 Support
               </h4>
               <div className="mail flex justify-center items-center gap-3 text-white hover:text-red-500 cursor-pointer leading-10">
-                <SiMinutemailer className="text-3xl" />
-                <span className="font-semibold">
+                <SiMinutemailer className="text-xs sm:text-base md:text-xl" />
+                <span className="text-xs sm:text-base md:text-xl font-semibold">
                   support@bigdealcreation.com
                 </span>
               </div>
               <div className="phone flex justify-center items-center gap-3 text-white hover:text-red-500 cursor-pointer leading-8">
-                <BiSolidPhoneCall className="text-3xl" />
-                <span className="font-semibold">+91 00000 00000</span>
+                <BiSolidPhoneCall className="text-xs sm:text-base md:text-xl" />
+                <span className="text-xs sm:text-base md:text-xl font-semibold">
+                  +91 00000 00000
+                </span>
               </div>
             </div>
           </div>
           <div className="copy-right py-4 relative z-10">
-            <p className="text-center text-slate-50 text-md">
+            <p className="text-center text-slate-50 text-xs sm:text-base md:text-xl">
               @ 2024 Big Deal Creation | All Rights Reserved
             </p>
           </div>
